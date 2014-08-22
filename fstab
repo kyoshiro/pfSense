@@ -1,0 +1,6 @@
+/dev/ufs/pfsense1 / ufs ro,sync,noatime 1 1
+/dev/ufs/cf /cf ufs ro,sync,noatime 1 1
+/dev/ad1s1 none swap sw 0 0
+/dev/ad1s2 /tmp ufs rw,sync,noatime 1 1
+/dev/ad1s3 /var ufs rw,sync,noatime 1 1
+

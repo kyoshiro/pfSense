@@ -1,0 +1,11 @@
+--- rc.orig     2014-06-20 19:05:22.000000000 +0200
++++ rc  2014-07-16 11:52:52.000000000 +0200
+@@ -140,6 +140,7 @@
+ elif [ "$PLATFORM" = "embedded" ] ; then
+     # do nothing for embedded platform
+ elif [ "$PLATFORM" = "nanobsd" ] || [ ${USE_MFS_TMPVAR} -gt 0 ]; then
++       /sbin/swapon -a 
+        # Ensure that old-style PKG packages can be persistent across reboots
+        /bin/mkdir -p /root/var/db/pkg
+        /bin/rm -rf /var/db/pkg
+

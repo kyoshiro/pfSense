@@ -1,0 +1,16 @@
+--- rc.embedded.orig    2014-06-20 19:05:18.000000000 +0200
++++ rc.embedded 2014-07-16 11:53:01.000000000 +0200
+@@ -23,8 +23,10 @@
+ [ -f /etc/rc.d/uzip ] && /etc/rc.d/uzip start
+ 
+ echo -n "Setting up memory disks..."
+-mdmfs -S -M -s ${tmpsize} md /tmp
+-mdmfs -S -M -s ${varsize} md /var
++#mdmfs -S -M -s ${tmpsize} md /tmp
++#mdmfs -S -M -s ${varsize} md /var
++mount /tmp
++mount /var
+ 
+ # Create some needed directories
+ /bin/mkdir -p /var/db
+
